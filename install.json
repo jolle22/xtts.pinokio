@@ -18,6 +18,12 @@
       }
     },
     {
+      "method": "shell.run",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m pip install --upgrade pip"
+      }
+    },
+    {
       "method": "shell.start",
       "params": {
         "env": {
@@ -65,6 +71,30 @@
       "method": "shell.enter",
       "params": {
         "message": "pip install gradio==3.50.2",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install langid",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install unidic",
         "on": [
           {
             "event": null,
